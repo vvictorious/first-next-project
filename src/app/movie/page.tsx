@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface MovieProps {
   title: string;
@@ -13,12 +14,18 @@ export default function Movie({
   poster_path,
   release_date,
 }: MovieProps) {
+  const imagePathBaseUrl = "https://image.tmdb.org/t/p/original/";
   return (
     <div>
       <h1>{title}</h1>
-      <h2>Release Date</h2>
+      <h2>Release Date: {release_date}</h2>
       <Link href={"/asd"}>
-        <img src="" />
+        <Image
+          src={imagePathBaseUrl + poster_path}
+          alt={"movie poster"}
+          width={800}
+          height={800}
+        />
       </Link>
     </div>
   );
