@@ -16,15 +16,16 @@ export default function Movie({
 }: MovieProps) {
   const imagePathBaseUrl = "https://image.tmdb.org/t/p/original/";
   return (
-    <div>
+    <div className="movie-container">
       <h1>{title}</h1>
       <h2>Release Date: {release_date}</h2>
       <Link href={"/asd"}>
         <Image
           src={imagePathBaseUrl + poster_path}
           alt={"movie poster"}
-          width={800}
-          height={800}
+          width={200}
+          height={300}
+          style={{ objectFit: 'cover' }}
         />
       </Link>
     </div>

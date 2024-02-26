@@ -7,16 +7,18 @@ export default async function Home() {
   const res = await data.json();
   console.log(res);
   return (
-    <main>
-      {res.results.map((movie: any) => (
-        <Movie
-          key={movie.id}
-          id={movie.id}
-          title={movie.title}
-          poster_path={movie.poster_path}
-          release_date={movie.release_date}
-        />
-      ))}
+    <main className="main">
+      <div className="movies-container">
+        {res.results.map((movie: any) => (
+          <Movie
+            key={movie.id}
+            id={movie.id}
+            title={movie.title}
+            poster_path={movie.poster_path}
+            release_date={movie.release_date}
+          />
+        ))}
+      </div>
     </main>
   );
 }
