@@ -16,7 +16,7 @@ export default function Movie({
 }: MovieProps) {
   const imagePathBaseUrl = "https://image.tmdb.org/t/p/original/";
   return (
-    <Link href={"/asd"}>
+    <Link href={`/${id}`}>
       <div className="movie-container">
         <h2 className="movie-title-text">{title}</h2>
         <div className="movie-image-container">
