@@ -8,6 +8,7 @@ export default async function Home() {
   console.log(res);
   return (
     <main className="main">
+      <h1 className="home-page-title">Trending Movies</h1>
       <div className="movies-container">
         {res.results.map((movie: any) => (
           <Movie
